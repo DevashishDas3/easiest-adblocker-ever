@@ -1,0 +1,19 @@
+
+{
+    "manifest_version": 2, 
+
+    "name": "Devs Ad Blocker",
+    "description": "Personal (Open Source)",
+    "version": "1.0", 
+    "icons": {"128":"ad-blocker.png"},
+    "browser_action" : {
+        "default_icon" : "ad-blocker.png", 
+        "defaultpop": "popup.html"
+    },
+
+    "background": [{
+        "scripts": ["background.js"],
+        "run_at": "document_idle",
+        "matches": ["*://www.youtube.com/*"]
+    }]
+}
